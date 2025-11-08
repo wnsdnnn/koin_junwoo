@@ -11,6 +11,6 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       home: SplashScreenWrapper(),
-    )
+    ),
   );
 }
