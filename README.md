@@ -22,27 +22,14 @@ A부터 Z까지, 한국 생활에 필요한 정보와 커뮤니티를 한 곳에
 
 ## 🛠️ 기술 스택 (Tech Stack)
 
-<<<<<<< HEAD
-- Frontend: **차승우(나)**  
-- Backend: (추후 작성 예정)  
-- Database: (추후 작성 예정)
-=======
 - Frontend: (전) 차승우 / 최준우 이지원
 - Backend: 이예빈 
 - Database: 김민구
 - PM: 양성혁
->>>>>>> b10f8d66b676aee8bde5402a77b22c288f6e9703
 
 ---
 
 ## 🚀 개발 현황
 
 - 2025.9.5: 개발 시작
-<<<<<<< HEAD
-=======
-# koin
-# koin
-# koin_server
-# koin
-# koin
->>>>>>> b10f8d66b676aee8bde5402a77b22c288f6e9703
+
