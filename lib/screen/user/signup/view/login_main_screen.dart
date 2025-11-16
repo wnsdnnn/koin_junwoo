@@ -105,7 +105,7 @@ class MainLoginScreen extends StatelessWidget {
               TextButton(
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.all(0),
-                  overlayColor: TRANSPARENT_COLOR,
+                  overlayColor: Colors.transparent,
                   elevation: 0,
                   splashFactory: NoSplash.splashFactory,
                   minimumSize: Size.zero,

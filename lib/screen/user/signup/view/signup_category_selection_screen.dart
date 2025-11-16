@@ -86,9 +86,9 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      backgroundColor: TRANSPARENT_COLOR,
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
-        backgroundColor: TRANSPARENT_COLOR,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: BLACK_COLOR),

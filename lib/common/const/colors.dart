@@ -14,7 +14,6 @@ const SPLASH_COLOR_START = Color(0xFF4A88F8);
 const SPLASH_COLOR_MIDDLE = Color(0xFF89D5FF);
 const KOIN_TEXT_GRADIENT_END = Color.fromARGB(255, 7, 11, 17);
 const LOGIN_BG_COLOR = Color(0xFFE8F0FF);
-const TRANSPARENT_COLOR = Color(0x00FF0000);
 const KAKAO_COLOR = Color(0xFFF8D01F);
 
 class GrayScale {

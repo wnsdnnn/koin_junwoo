@@ -54,7 +54,7 @@ class _LoginEmailScreenState extends State<LoginEmailScreen> {
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: TRANSPARENT_COLOR,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),

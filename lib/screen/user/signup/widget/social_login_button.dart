@@ -42,8 +42,8 @@ class SocialLoginButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(26)),
         // TODO: enable/disable interaction animation?
         elevation: 0,
-        overlayColor: TRANSPARENT_COLOR,
-        shadowColor: TRANSPARENT_COLOR,
+        overlayColor: Colors.transparent,
+        shadowColor: Colors.transparent,
         enableFeedback: false,
         splashFactory: NoSplash.splashFactory,
       ),
