@@ -4,7 +4,6 @@ import 'package:koin/screen/user/home_screen.dart';
 import 'package:koin/screen/user/signup/view/gradient_container.dart';
 import 'package:koin/screen/user/signup/view/signup_reset_password_screen.dart';
 import 'package:koin/screen/user/signup/widget/guided_textbutton.dart';
-import 'package:koin/screen/user/signup/widget/submit_button.dart';
 
 class LoginEmailScreen extends StatefulWidget {
   const LoginEmailScreen({super.key});
@@ -38,13 +37,6 @@ class _LoginEmailScreenState extends State<LoginEmailScreen> {
     super.dispose();
   }
 
-  void _signIn() {
-    Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(builder: (context) => HomeScreen()),
-      (route) => false,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final bool isButtonEnabled =
@@ -63,7 +55,11 @@ class _LoginEmailScreenState extends State<LoginEmailScreen> {
       ),
       body: GradientContainer(
         hasSubmitButton: true,
-        submitCallback: _signIn,
+        submitCallback:
+            () => Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+              (route) => false,
+            ),
         submitLabel: "Login",
         isSubmitEnabled: isButtonEnabled,
         child: Column(

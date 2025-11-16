@@ -15,7 +15,6 @@ class PersonalDetailsScreen extends StatefulWidget {
 
 class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
   final _emailController = TextEditingController();
-  bool isButtonEnabled = false;
 
   @override
   void dispose() {
@@ -77,6 +76,8 @@ class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: fix to check if all inputs are not empty
+    final bool isButtonEnabled = _emailController.text.isNotEmpty;
     return Scaffold(
       backgroundColor: WHITE_COLOR,
 
@@ -84,7 +85,7 @@ class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
         hasSubmitButton: true,
         submitCallback: _onPressed,
         submitLabel: "Next",
-        isSubmitEnabled: false,
+        isSubmitEnabled: isButtonEnabled,
 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

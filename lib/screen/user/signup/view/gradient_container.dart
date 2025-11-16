@@ -29,16 +29,6 @@ class GradientContainer extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          if (hasSubmitButton)
-            Positioned(
-              bottom: 0,
-              left: 0,
-              child: SubmitButton(
-                onPressed: submitCallback!,
-                label: submitLabel!,
-                isEnabled: isSubmitEnabled!,
-              ),
-            ),
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -52,6 +42,16 @@ class GradientContainer extends StatelessWidget {
               child: child,
             ),
           ),
+          if (hasSubmitButton)
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: SubmitButton(
+                onPressed: submitCallback!,
+                label: submitLabel!,
+                isEnabled: isSubmitEnabled!,
+              ),
+            ),
         ],
       ),
     );
