@@ -18,11 +18,11 @@ const KAKAO_COLOR = Color(0xFFF8D01F);
 
 class GrayScale {
   static const Color black = Color(0xFF000000);
-  static const Color gray600 = Color(0xFF737373);
-  static const Color gray500 = Color(0xFF8C8C8C);
-  static const Color gray400 = Color(0xFF959595);
-  static const Color gray300 = Color(0xFFBCBCBC);
-  static const Color gray200 = Color(0xFFD9D9D9);
+  static const Color gray600 = Color(0xFF5A626D);
+  static const Color gray500 = Color(0xFF7D8792);
+  static const Color gray400 = Color(0xFF98A0A9);
+  static const Color gray300 = Color(0xFFC0C7CD);
+  static const Color gray200 = Color(0xFFD6DBDF);
   static const Color gray100 = Color(0xFFF5F5F5);
   static const Color white = Color(0xFFFFFFFF);
 
