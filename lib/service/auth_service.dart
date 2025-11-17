@@ -1,41 +1,30 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'auth_service.freezed.dart';
+part 'auth_service.g.dart';
 
 // ⚠️ 서버 주소 변경 필수: 에뮬레이터에서 테스트 시 http://10.0.2.2:8080 사용
 // 실제 기기나 같은 네트워크 컴퓨터 테스트 시에는 해당 컴퓨터의 IP 주소 사용
 const String _baseUrl = "http://210.108.124.228:8080"; // 사용자 IP로 가정
 
 // API 요청 바디 구조
-class RegisterRequest {
-  final String name;
-  final String username;
-  final String email;
-  final String password;
-  final String nationality;
-  final String birthdate;
-  final String nickname; // 💡 닉네임 필드 추가
+@freezed
+abstract class RegisterRequest with _$RegisterRequest {
+  const factory RegisterRequest({
+    // 기존 final 필드들을 required 필드로 변환
+    required final String name,
+    required final String username,
+    required final String email,
+    required final String password,
+    required final String nationality,
+    required final String birthdate,
+    required final String nickname,
+  }) = _RegisterRequest;
 
-  RegisterRequest({
-    required this.name,
-    required this.username,
-    required this.email,
-    required this.password,
-    required this.nationality,
-    required this.birthdate,
-    required this.nickname, // 💡 생성자에 추가
-  });
-
-  Map<String, dynamic> toJson() {
-    return {
-      "name": name,
-      "username": username,
-      "email": email,
-      "password": password,
-      "nickname": nickname, // 💡 JSON 변환에 포함
-      "nationality": nationality,
-      "birthdate": birthdate,
-    };
-  }
+  // JSON -> 객체 변환을 위한 fromJson 팩토리
+  factory RegisterRequest.fromJson(Map<String, dynamic> json) =>
+      _$RegisterRequestFromJson(json);
 }
 
 // 회원가입 API 호출 함수
