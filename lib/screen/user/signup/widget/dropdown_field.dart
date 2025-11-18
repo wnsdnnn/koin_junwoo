@@ -28,7 +28,8 @@ class DropdownField extends StatelessWidget {
           ),
         ),
         DropdownButtonFormField<String>(
-          initialValue: value,
+          //initialValue: value,
+          value: value,
           decoration: const InputDecoration(
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: PRIMARY_COLOR),
